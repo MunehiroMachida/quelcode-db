@@ -1,65 +1,73 @@
-<mxfile host="" modified="2020-06-30T04:24:36.285Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.46.1 Chrome/78.0.3904.130 Electron/7.3.1 Safari/537.36" etag="UGOW2tNWHimk7GGoeawH" version="13.1.3">
+<mxfile host="" modified="2020-06-30T06:27:38.772Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.46.1 Chrome/78.0.3904.130 Electron/7.3.1 Safari/537.36" etag="n7Qz_IbQMGs2o0lI5Gd6" version="13.1.3">
     <diagram id="6hGFLwfOUW9BJ-s0fimq" name="Page-1">
-        <mxGraphModel dx="1001" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1250" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="4" value="個人情報" style="text;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;" vertex="1" parent="1">
-                    <mxGeometry x="60" y="50" width="80" height="26" as="geometry"/>
+                <mxCell id="4" value="ユーザー" style="text;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="39" width="80" height="26" as="geometry"/>
                 </mxCell>
                 <mxCell id="9" value="チャットルーム&#10;" style="text;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;" vertex="1" parent="1">
-                    <mxGeometry x="374" y="40" width="80" height="26" as="geometry"/>
+                    <mxGeometry x="640" y="39" width="80" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="2" value="ユーザーid" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=60;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=7;" vertex="1" parent="1">
-                    <mxGeometry x="50" y="80" width="190" height="280" as="geometry"/>
-                </mxCell>
-                <mxCell id="3" value="メールアドレス&#10;&#10;パスワード&#10;&#10;表示名&#10;&#10;自己紹介&#10;&#10;電話番号&#10;&#10;論理削除&#10;&#10;作成日時&#10;&#10;更新日時&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="2">
-                    <mxGeometry y="60" width="190" height="220" as="geometry"/>
-                </mxCell>
-                <mxCell id="18" value="" style="fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;exitX=1.016;exitY=0.805;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="6">
-                    <mxGeometry width="100" height="100" relative="1" as="geometry">
-                        <mxPoint x="300" y="520" as="sourcePoint"/>
-                        <mxPoint x="400" y="420" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="5" value="ユーザーid(FK)&#10;チャットルームid" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=80;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=11;" vertex="1" parent="1">
-                    <mxGeometry x="360" y="65" width="190" height="310" as="geometry"/>
-                </mxCell>
-                <mxCell id="6" value="チャットルーム名&#10;&#10;チャット概要&#10;&#10;ファイル送信&#10;&#10;論理削除&#10;&#10;作成日時&#10;&#10;更新日時&#10;&#10;作成者&#10;&#10;更新者" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="5">
-                    <mxGeometry y="80" width="190" height="230" as="geometry"/>
-                </mxCell>
-                <mxCell id="10" value="投稿id&#10;チャットルームid(FK)" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=80;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=10;" vertex="1" parent="1">
-                    <mxGeometry x="35" y="530" width="220" height="280" as="geometry"/>
-                </mxCell>
-                <mxCell id="11" value="投稿内容&#10;&#10;添付ファイル&#10;&#10;論理削除&#10;&#10;投稿日時&#10;&#10;更新日時&#10;&#10;投稿者&#10;&#10;更新者" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="10">
-                    <mxGeometry y="80" width="220" height="200" as="geometry"/>
-                </mxCell>
-                <mxCell id="14" value="タスクid&#10;投稿id(FK)" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=80;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=8;" vertex="1" parent="1">
-                    <mxGeometry x="400" y="505" width="160" height="330" as="geometry"/>
-                </mxCell>
-                <mxCell id="15" value="タスク内容&#10;&#10;タスク担当者&#10;&#10;期限&#10;&#10;完了判断&#10;&#10;論理削除&#10;&#10;作成日時&#10;&#10;更新日時&#10;&#10;作成者&#10;&#10;更新者" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="14">
-                    <mxGeometry y="80" width="160" height="250" as="geometry"/>
-                </mxCell>
-                <mxCell id="19" value="チャット内容" style="text;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;" vertex="1" parent="1">
-                    <mxGeometry x="35" y="490" width="80" height="26" as="geometry"/>
+                <mxCell id="19" value="投稿" style="text;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="590" y="454" width="80" height="26" as="geometry"/>
                 </mxCell>
                 <mxCell id="20" value="タスク" style="text;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;" vertex="1" parent="1">
-                    <mxGeometry x="400" y="470" width="80" height="26" as="geometry"/>
+                    <mxGeometry x="300" y="450" width="80" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="21" value="" style="fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERzeroToOne;exitX=0.158;exitY=1.022;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.705;entryY=-0.014;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="6" target="10">
+                <mxCell id="26" value="参加者" style="text;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="39" width="80" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="" style="fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="24">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
-                        <mxPoint x="300" y="420" as="sourcePoint"/>
-                        <mxPoint x="320" y="510" as="targetPoint"/>
-                        <Array as="points">
-                            <mxPoint x="390" y="430"/>
-                            <mxPoint x="190" y="430"/>
-                        </Array>
+                        <mxPoint x="627" y="135" as="sourcePoint"/>
+                        <mxPoint x="510" y="140" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="22" value="" style="fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;exitX=1.009;exitY=0.355;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="11">
+                <mxCell id="29" value="" style="fontSize=12;html=1;endArrow=ERzeroToMany;startArrow=ERmandOne;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="24">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
-                        <mxPoint x="274" y="685" as="sourcePoint"/>
-                        <mxPoint x="400" y="681" as="targetPoint"/>
+                        <mxPoint x="223" y="135" as="sourcePoint"/>
+                        <mxPoint x="300" y="140" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5" value="チャットルームid" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=45;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=0;" vertex="1" parent="1">
+                    <mxGeometry x="630" y="65" width="190" height="275" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="チャットルーム名&#10;&#10;チャット概要&#10;&#10;ファイル送信&#10;&#10;論理削除&#10;&#10;作成日時&#10;&#10;更新日時&#10;&#10;作成者&#10;&#10;更新者" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="5">
+                    <mxGeometry y="45" width="190" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="ユーザーid&#10;チャットルームid" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=0;" vertex="1" parent="1">
+                    <mxGeometry x="334" y="65" width="160" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="ユーザーid" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=45;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=0;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="65" width="190" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="メールアドレス&#10;&#10;パスワード&#10;&#10;表示名&#10;&#10;自己紹介&#10;&#10;電話番号&#10;&#10;論理削除&#10;&#10;作成日時&#10;&#10;更新日時&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="2">
+                    <mxGeometry y="45" width="190" height="235" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="タスクid" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=0;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="480" width="230" height="332.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="チャットルームid(FK)&#10;&#10;タスク内容&#10;&#10;タスク担当者&#10;&#10;期限&#10;&#10;完了判断&#10;&#10;論理削除&#10;&#10;作成日時&#10;&#10;更新日時&#10;&#10;作成者&#10;&#10;更新者" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="14">
+                    <mxGeometry y="50" width="230" height="282.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="投稿id" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=0;" vertex="1" parent="1">
+                    <mxGeometry x="600" y="480" width="220" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="チャットルームid(FK)&#10;&#10;投稿内容&#10;&#10;添付ファイル&#10;&#10;論理削除&#10;&#10;投稿日時&#10;&#10;更新日時&#10;&#10;投稿者&#10;&#10;更新者" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="10">
+                    <mxGeometry y="50" width="220" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="" style="fontSize=12;html=1;endArrow=ERzeroToMany;startArrow=ERmandOne;entryX=0.645;entryY=-0.004;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.595;exitY=1.017;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="6" target="10">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="740" y="378" as="sourcePoint"/>
+                        <mxPoint x="740" y="470" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="31" value="" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;startArrow=ERmandOne;entryX=0.578;entryY=-0.003;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="6" target="14">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="580" y="320" as="sourcePoint"/>
+                        <mxPoint x="430" y="460" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
             </root>
