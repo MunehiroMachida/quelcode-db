@@ -1,4 +1,4 @@
-CREATE TABLE `user_information` (
+CREATE TABLE `users_informations` (
     `id` int(11) PRIMARY KEY AUTO_INCREMENT,
     `email_address` varchar(100) NOT NULL,
     `password` varchar(100) NOT NULL,
@@ -11,48 +11,48 @@ CREATE TABLE `user_information` (
     `updated_at` datetime NOT NULL
 );
 
-CREATE TABLE `chatroom` (
+CREATE TABLE `chatrooms` (
     `id` int(11) PRIMARY KEY AUTO_INCREMENT,
     `chatroom_name` varchar(100) NOT NULL,
     `chatroom_overview` varchar(1000),
-    `file_transmission_flag` tinyint(1) NOT NULL DEFAULT '0',
-    `direct_chat_flag` tinyint(1) NOT NULL DEFAULT '0',
+    `is_file_transmission` tinyint(1) NOT NULL DEFAULT '0',
+    `is_direct_chat` tinyint(1) NOT NULL DEFAULT '0',
     `is_deleted` tinyint(1) NOT NULL DEFAULT '0',
-    `create_user` int(11) NOT NULL REFERENCES user_information(id),
-    `update_user` int(11) NOT NULL REFERENCES user_information(id),
+    `create_user` int(11) NOT NULL REFERENCES users_informations(id),
+    `update_user` int(11) NOT NULL REFERENCES users_informations(id),
     `created_at` datetime NOT NULL,
     `updated_at` datetime NOT NULL
 );
 
-CREATE TABLE `participant` (
-    `user_id` int(11) REFERENCES user_information(id),
-    `chatroom_id` int(11) REFERENCES chatroom(id),
+CREATE TABLE `participants` (
+    `user_id` int(11) REFERENCES users_informations(id),
+    `chatroom_id` int(11) REFERENCES chatrooms(id),
     `participation_date` datetime NOT NULL,
     PRIMARY KEY (`id`,`chatroom_id`)
 );
 
 CREATE TABLE `posts` (
     `id` int(11) PRIMARY KEY AUTO_INCREMENT,
-    `chatroom_id` int(11) NOT NULL REFERENCES chatroom(chatroom_id),
+    `chatroom_id` int(11) NOT NULL REFERENCES chatrooms(id),
     `post_content` varchar(1000) NOT NULL,
     `file_name` varchar(100),
     `is_deleted` tinyint(1) NOT NULL DEFAULT '0',
-    `create_user` int(11) NOT NULL REFERENCES user_information(id),
-    `update_user` int(11) NOT NULL REFERENCES user_information(id),
+    `create_user` int(11) NOT NULL REFERENCES users_informations(id),
+    `update_user` int(11) NOT NULL REFERENCES users_informations(id),
     `created_at` datetime NOT NULL,
     `updated_at` datetime NOT NULL
 );
 
-CREATE TABLE `task` (
+CREATE TABLE `tasks` (
     `id` int(11) PRIMARY KEY AUTO_INCREMENT,
-    `chatroom_id` int(11) NOT NULL REFERENCES chatroom(chatroom_id),
+    `chatroom_id` int(11) NOT NULL REFERENCES chatrooms(id),
     `task_content` varchar(1000) NOT NULL,
-    `person_in_charge_id` int(11) NOT NULL REFERENCES user_information(id),
+    `person_in_charge_id` int(11) NOT NULL REFERENCES users_informations(id),
     `deadline` datetime,
-    `complete_flag` tinyint(1) NOT NULL DEFAULT '0',
+    `is_complete` tinyint(1) NOT NULL DEFAULT '0',
     `is_deleted` tinyint(1) NOT NULL DEFAULT '0',
-    `create_user` int(11) NOT NULL REFERENCES user_information(id),
-    `update_user` int(11) NOT NULL REFERENCES user_information(id),
+    `create_user` int(11) NOT NULL REFERENCES users_informations(id),
+    `update_user` int(11) NOT NULL REFERENCES users_informations(id),
     `created_at` datetime NOT NULL,
     `updated_at` datetime NOT NULL
 );
