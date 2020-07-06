@@ -47,7 +47,7 @@ CREATE TABLE `tasks` (
     `id` int(11) PRIMARY KEY AUTO_INCREMENT,
     `chatroom_id` int(11) NOT NULL REFERENCES chatrooms(id),
     `task_content` varchar(1000) NOT NULL,
-    `person_in_charge_id` int(11) NOT NULL REFERENCES users_informations(id),
+    `handle_person` int(11) NOT NULL REFERENCES users_informations(id),
     `deadline` datetime,
     `is_complete` tinyint(1) NOT NULL DEFAULT '0',
     `is_deleted` tinyint(1) NOT NULL DEFAULT '0',
