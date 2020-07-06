@@ -1,10 +1,3 @@
-
-
-
-
--- INSERT INTO chatrooms (chatroom_name,chatroom_overview,is_sendable,is_direct_chat,is_deleted,create_user,update_user,created_at,updated_at)
--- VALUES ()    テンプレ
-
 INSERT INTO chatrooms (chatroom_name,chatroom_overview,create_user,update_user,created_at,updated_at)
 VALUES ('りんご','利用者の集まり',1,1,'2020/04/21 11:26:32','2020/04/21 11:26:32');
 
