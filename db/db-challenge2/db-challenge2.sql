@@ -15,7 +15,7 @@ CREATE TABLE `chatrooms` (
     `id` int(11) PRIMARY KEY AUTO_INCREMENT,
     `chatroom_name` varchar(100) NOT NULL,
     `chatroom_overview` varchar(1000),
-    `is_file_transmission` tinyint(1) NOT NULL DEFAULT '0',
+    `is_file_send` tinyint(1) NOT NULL DEFAULT '0',
     `is_direct_chat` tinyint(1) NOT NULL DEFAULT '0',
     `is_deleted` tinyint(1) NOT NULL DEFAULT '0',
     `create_user` int(11) NOT NULL REFERENCES users_informations(id),
