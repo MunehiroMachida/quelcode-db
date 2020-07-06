@@ -28,7 +28,7 @@ CREATE TABLE `participants` (
     `user_id` int(11) REFERENCES users_informations(id),
     `chatroom_id` int(11) REFERENCES chatrooms(id),
     `participation_date` datetime NOT NULL,
-    PRIMARY KEY (`id`,`chatroom_id`)
+    PRIMARY KEY (`user_id`,`chatroom_id`)
 );
 
 CREATE TABLE `posts` (
