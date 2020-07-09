@@ -6,4 +6,5 @@ JOIN users_informations
 ON posts.create_user = users_informations.id
 WHERE posts.is_deleted NOT IN (1)
 AND users_informations.is_deleted NOT IN (1)
-GROUP BY posts.chatroom_id;
+GROUP BY posts.chatroom_id
+ORDER BY COUNT(posts.chatroom_id) DESC;
