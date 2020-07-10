@@ -1,8 +1,9 @@
 BEGIN;
 UPDATE chatrooms
-JOIN participants
-ON chatrooms.id = participants.chatroom_id
-SET chatrooms.is_sendable = 0,chatrooms.update_user = 1,chatrooms.updated_at = CURRENT_TIMESTAMP
-WHERE participants.user_id NOT IN (1)
+SET is_sendable = 0,update_user = 1,updated_at = CURRENT_TIMESTAMP
+WHERE id NOT IN (
+    SELECT chatroom_id FROM participants
+    WHERE user_id =1
+)
 AND chatrooms.is_deleted = 0;
 COMMIT;
